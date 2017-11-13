@@ -6,6 +6,15 @@ Follow the links for more in-depth content.
 
 The other files contain chapters of this file for easier reading.
 
+## Chapters
+
+* [Concurrency](#concurrency)
+* [Areas](#areas-of-concurrency)
+* [A word about platforms](#a-word-about-platforms)
+* [Async/await Introduction](#asyncawait-introduction)
+* [Parallel programming](#parallel-programming)
+* [Related topics](#related-topics)
+
 
 # Concurrency
 
@@ -125,7 +134,7 @@ Execution
 
 
 
-# c# Async/await Introduction 
+# Async/await Introduction 
 
 
 [https://blog.stephencleary.com/2012/02/async-and-await.html](https://blog.stephencleary.com/2012/02/async-and-await.html)
@@ -419,7 +428,7 @@ Task constructor	Task.Run	        Create a code-based task (operation)
 
 
 
-# C# Parallel programming
+# Parallel programming
 
 
 [http://www.albahari.com/threading/part5.aspx#_Parallel_Programming](http://www.albahari.com/threading/part5.aspx#_Parallel_Programming)
@@ -489,7 +498,7 @@ text.AsParallel().Aggregate (
 - different task continuation options
 
 
-# Optional:
+# Related topics:
 
 ## async + OOP gotchas 
 

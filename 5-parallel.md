@@ -1,5 +1,5 @@
 
-# C# Parallel programming
+# Parallel programming
 
 
 [http://www.albahari.com/threading/part5.aspx#_Parallel_Programming](http://www.albahari.com/threading/part5.aspx#_Parallel_Programming)
