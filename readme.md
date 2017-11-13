@@ -1,3 +1,12 @@
+# Async Programming
+
+All the content is below.
+
+Follow the links for more in-depth content.
+
+The other files contain chapters of this file for easier reading.
+
+
 # Concurrency
 
 
@@ -503,6 +512,12 @@ text.AsParallel().Aggregate (
 - data isolation
 - locking
 - concurrent data structures
+
+Lock:
+- lock internally
+- lock on dedicated object
+- lock shortly as possible
+- lock all the usages
 
 
 ## Streams
