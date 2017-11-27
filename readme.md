@@ -68,6 +68,15 @@ Execution
 
 [https://d33ypg4xwx0n86.cloudfront.net/direct?url=http%3A%2F%2Ftwimgs.com%2Fddj%2Fimages%2Farticle%2F2010%2F1003%2Fpillar_ec_hs_table1.gif&resize=w640](https://d33ypg4xwx0n86.cloudfront.net/direct?url=http%3A%2F%2Ftwimgs.com%2Fddj%2Fimages%2Farticle%2F2010%2F1003%2Fpillar_ec_hs_table1.gif&resize=w640)
 
+# Asynchronous
+
+- it means that we continue execution after something finished
+- this can happen in many ways (events, callbacks, promises, async/await)
+- the opposite of async is blocking code, where we blocka and wait for something to finish
+- I/O async: when working with I/O opperations
+- event async: manually triggered like an event
+
+
 ## Responsivenes and isolation
 
 - highest level of concurrency
@@ -103,15 +112,6 @@ Execution
 - tech: locks, ConcurrentCollections, BlockingCollection, AutoResetEventSlim, ManualResetEventSlim, Interlocked.*
 
 
-# Asynchronous
-
-- it means that we continue execution after something finished
-- this can happen in many ways (events, callbacks, promises, async/await)
-- the opposite of async is blocking code, where we blocka and wait for something to finish
-- I/O async: when working with I/O opperations
-- event async: manually triggered like an event
-
-
 
 # A word about platforms
 
@@ -121,11 +121,17 @@ Execution
 - do as little as possible on UI thread to keep it responsive
 - UI thread crashes -> app crashes
 
-## Asp.Net
+## Threaded servers
 - each request processed on one thread
 - has a pool of threads
 - avoid work outside the request thread as it will consume threads from the pool and kill scalability
 - reaponsivenes is guaranteed by having threads in the pool which can be used
+
+## Event-driven servers
+- one thread processes requests
+- performance is gained by not switching/scheduling threads
+- must use asynchrnous operations to be able to scale
+- heavy calculations will block the server
 
 ## Console
 - no running model
@@ -347,8 +353,8 @@ public void LoadDataAsync()
 
 ### Other Task.* methods
 
-- Task.WhenAll
-- Task.WhenAny
+- Task.WhenAll / Promise.all
+- Task.WhenAny / Promise.race
 - Task.Delay
 - Task.Yield
 - Task.FromResult

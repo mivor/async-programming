@@ -7,6 +7,15 @@
 
 [https://d33ypg4xwx0n86.cloudfront.net/direct?url=http%3A%2F%2Ftwimgs.com%2Fddj%2Fimages%2Farticle%2F2010%2F1003%2Fpillar_ec_hs_table1.gif&resize=w640](https://d33ypg4xwx0n86.cloudfront.net/direct?url=http%3A%2F%2Ftwimgs.com%2Fddj%2Fimages%2Farticle%2F2010%2F1003%2Fpillar_ec_hs_table1.gif&resize=w640)
 
+# Asynchronous
+
+- it means that we continue execution after something finished
+- this can happen in many ways (events, callbacks, promises, async/await)
+- the opposite of async is blocking code, where we blocka and wait for something to finish
+- I/O async: when working with I/O opperations
+- event async: manually triggered like an event
+
+
 ## Responsivenes and isolation
 
 - highest level of concurrency
@@ -40,12 +49,3 @@
 - if mutation is needed then limit access and synchronize (locks)
 - synchronization via locks ideal is an implementation detail and done in low level code
 - tech: locks, ConcurrentCollections, BlockingCollection, AutoResetEventSlim, ManualResetEventSlim, Interlocked.*
-
-
-# Asynchronous
-
-- it means that we continue execution after something finished
-- this can happen in many ways (events, callbacks, promises, async/await)
-- the opposite of async is blocking code, where we blocka and wait for something to finish
-- I/O async: when working with I/O opperations
-- event async: manually triggered like an event
